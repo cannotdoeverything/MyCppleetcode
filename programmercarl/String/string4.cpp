@@ -49,6 +49,35 @@ private:
 
 }
 public: 
+/*void reverse2(string& s, int start, int end){
+    for(int i = start, j= end; i<j;i++,j--){
+        swap(s[i],s[j]);
+    }
+}
+void removeSpace(string& s){
+    int slow = 0;
+    for(int i =0;i<s.size();++i){
+        if(s[i] !=' '){
+            if(slow != 0) s[slow++]=' ';    //手动控制空格，给单词之间添加空格如“ Hello world”情况
+        }
+        while(i<s.size() && s[i] != ' '){
+            s[slow++] = s[i++];
+        }
+    }
+    s.resize(slow);
+}
+string reverseWords(string s){
+    removeSpace(s);
+    reverse(s,0,s.size()-1);
+    int start =0 ;
+    for(int i =0; i<=s.size();i++){
+        if(i==s.size() || s[i] == ''){
+        reverse(s,start,i-1);
+        start = i+1;
+        }
+        }
+        return s;
+    };*/
     string reverseWord(string s){
         s = trim(s);
         vector<string> wordList = split(s);
