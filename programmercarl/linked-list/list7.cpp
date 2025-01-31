@@ -30,7 +30,7 @@ public:
     ListNode *findCycle(ListNode *head){
         ListNode *fast = head;
         ListNode *slow = head;
-        while(fast !=nullptr && fast->next !=nullptr){
+        while(fast !=nullptr && fast->next !=nullptr){ //这个条件很重要
             slow=slow->next;
             fast=fast->next->next;
         if(slow==fast){

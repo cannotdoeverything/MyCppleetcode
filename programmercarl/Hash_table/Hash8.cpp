@@ -11,7 +11,7 @@ public:
     vector<vector<int>> fourSum(vector<int>& nums, int target){
         vector<vector<int>> res;
         sort(nums.begin(),nums.end());
-        if(nums.size()<4) return {};
+        if(nums.size()<4) return {}; //重要导致越界访问，从而引发运行时错误或未定义行为。
         for(int i=0;i<nums.size()-3;i++){
             if(i>0 && nums[i]==nums[i-1]) continue;
             for(int j= i+1;j<nums.size()-2;j++){
